@@ -60,10 +60,102 @@ int avg=a+b+c/3;
 printf("\n average=%d",avg);
 
 //no7
+//Area & Perimeter
+int length=22;
+int breadth=17;
+float pi=3.14;
+printf("\n Area of Rectangle:%d",length*breadth);
+printf("\n perimeter of area=%d",2*(length+breadth));
+
+int side=14;
+printf("\n Area of Square:%d",side*side);
+printf("\n perimeter of Square=%d",4*(side));
+
+ float radius=14.6;
+ printf("\n Area of Circle:%f",pi*radius*radius);
+ printf("\n Circumference of Circle=%f",2*pi*radius);
+
+ //no8
+ //celusius to fahrenheit
+ float celusius =102.7;
+ printf("\n Fahrenheit = %f",(celusius*9/5)+32);
+ 
+ 
+ 
+ //no9
+ //simple interest
+ 
+ int P=5000,N=4,R=15;
+ 
+
+ printf("Simple Interest=%d",P*N*R/100);
+ 
+
+//no10
+//compound interest
+
+ int P=1000,R=2,N=5;
+ float Amount=P*(1+R/100)*N;
 
 
+ printf("\n Amount:%2f",Amount);
+ float CI=Amount-P;
+ printf("\n CI:%2f",CI);
+
+
+ //no11
+//Assignment operator
+
+int a=30, b=15;
+printf("a=%d,b=%d\n",a,b);
+a=30;
+printf("\n a=b:%d",a=b);
+printf("\n a+=b:%d",a+=b);
+printf("\n a-=b:%d",a-=b);
+printf("\n a*=b:%d",a*=b);
+printf("\n a/=b:%d",a/=b);
+printf("\n a%=b:%d",a%=b);
+
+
+//no12
+//last 2 digit
+ int x;
+ printf("\n Enter the number:");
+ scanf("%d",&x);
+ printf("\n Last two digit number is:%d",x%100);
+
+ //no13
+ //comma operator
+ int a=5,b=6;
+ printf("\n The square of this number is:%d",a*a);
+ printf("\n The cube of this number is:%d",a*a*a);
+ printf("\n The square of this number is:%d",b*b);
+ printf("\n The cube of this number is:%d",b*b*b);
+
+  //no14
+ //sizeof operator
+ int x=10;
+ float y=15.6;
+ char ch='V';
+
+ printf("Sizeof X:%zu",sizeof (x));
+ printf("\n Sizeof Y:%zu",sizeof (y));
+ printf("\n Sizeof Character V is:%zu",sizeof (ch));
+
+ //no15
+ //ternary operator
+  int a=13,b=9;
+  int c=(b<a)?a:b;
+  int d=(a<b)?a:b;
+  printf("c=%d is largest",c);
+printf("\n d=%d is smaller",d);
 
 
 
     return 0;
 }
+
+
+
+
+    
