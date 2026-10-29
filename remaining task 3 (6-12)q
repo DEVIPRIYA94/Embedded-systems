@@ -1,0 +1,127 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   //NO 4
+// STAR PATTERN
+for(int i=1;i<=6;i++)
+    {for(int j=1;j<=i;j++)
+    {printf("*");
+   } printf("\n");
+    }
+   
+
+    //NO 6
+//VOWEL OR CONSONANT
+  
+   char ch;
+   printf("Enter a character:");
+   scanf("%c",&ch);
+   if(ch=='a' || ch=='e' ||ch=='i'|| ch=='o'|| ch=='u')
+   {printf("vowels");
+   }else
+   {printf("consonant");
+   }
+   
+   //NO 7
+  //MONTH ON A NUMBER
+  //switch 1.january 2. feburary 3.march..........12.december
+  int month;
+  printf("MONTH OF A YEAR:");
+  scanf("%d",&month);
+  switch(month)
+  {case 1:
+  printf("1.January is a jolly month");
+  break;
+  case 2:
+  printf("2.February is a fabulous month");
+  break;
+  case 3:
+  printf("3.March is a marvolous month");
+  break;
+  case 4:
+  printf("4.April is a anxiety month");
+  break;
+  case 5:
+  printf("5.May is a mindblowing month");
+  break;
+  case 6:
+  printf("6.June is a jubliee half of a month");
+  break;
+  case 7:
+  printf("7.July is a joyful month");
+  break;
+  case 8:
+  printf("8.August is a autumn of a month");
+  break;
+  case 9:
+  printf("9.September is a Strategy of a month");
+  break;
+  case 10:
+  printf("10.October is a obstacles of a month");
+  break;
+  case 11:
+  printf("11.November is a nice of a month ");
+  break;
+  case 12:
+  printf("12.December is a delightful of a month");
+  break;
+  default:
+  printf("12 month of a year");
+  }
+   
+   //NO9
+//1 to N numbers
+//while loop
+int N,i=1;
+printf("enter the number N:");
+scanf("%d",&N);
+while(i<=N)
+{printf("\n%d",i);
+i++;
+}
+
+//NO10
+//even numbers
+
+int N,i=2;
+printf("enter the number N:");
+scanf("%d",&N);
+while(i<=N)
+{printf("\n%d",i);
+i=i+2;
+}
+
+
+//NO11
+//Natural number
+
+int i=1,N,sum=0;
+
+printf("enter the number N:");
+scanf("%d",&N);
+while(i<=N)
+{sum=sum+i;
+i++;
+    
+}
+printf("sum of:%d",sum);*/
+
+//NO12
+//factorial number
+int n;
+
+printf("factorial number of:");
+scanf("%d\n",&n);
+int f=1;
+for(int i=1;i<=n;i++){
+f*=i;
+
+}printf("%d\n number is:",f);
+
+
+   
+   
+    return 0;
+}
