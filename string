@@ -1,0 +1,58 @@
+#include <stdio.h>
+
+int main()
+{
+   /* //NO1
+    //string
+   
+   { char s[15];
+    
+    printf("write the sentence:");
+    fgets(s,sizeof(s),stdin);
+    printf("sentence of:%s\n",s);
+    
+   }
+   
+   //No2
+   //string length
+   
+   { char s[12];
+   int len=0;
+       
+   printf("enter the name of:");
+   scanf("%s",s);
+   for(int i=0;s[i]!='\0';i++)
+   {
+       len++;
+   }printf("%d",len);
+   
+   }*/
+   
+   
+   //No3
+   //count frequency
+  char s[20];
+   char ch;
+   int count=0;
+  printf("enter the string:");
+   scanf("%s",&s);
+   printf("enter the character:");
+   scanf( "%c%s",&ch);
+   for(int i=0;s[i]!='\0';i++)
+{   if (s[i]==ch);
+    {
+       count++;
+        
+        
+}
+}printf("\ncount the frequency of%c is%d",ch,count);
+
+
+   
+   
+   
+   
+   
+   
+    return 0;
+}
