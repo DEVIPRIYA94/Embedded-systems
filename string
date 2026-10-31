@@ -47,8 +47,132 @@ int main()
 }
 }printf("\ncount the frequency of%c is%d",ch,count);
 
+//No4
+    //count vowels
+    char s[20];
+    int count=0;
 
+    printf("enter the vowels:");
+    scanf("%s", &s);
+    printf("the vowels of:");
+
+
+    for(int i=0;s[i]!='\0';i++)
+    {
+        if(s[i]=='a'|| s[i]=='e'|| s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='A'|| s[i]=='E'|| s[i]=='I'||s[i]=='O'||s[i]=='U')
+       { printf("%c",  s[i]);
+    count++;
+    }
+    }printf("\nnumber of vowels is: %d", count);
+
+    
+
+    //No5
+    //character separately
+   char name[30];
+  
+   printf("enter the word:");
+   fgets(name,sizeof(name),stdin);
    
+   for(int i=0;name[i]!='\0' &&name[i]!='\n';i++)
+  
+   {
+       printf("%c\n",name[i]);
+   }
+
+    //No6
+     //convert sentence into uppercase words
+     # include<ctype.h> 
+     {char name[100];
+  
+   printf("enter the word:");
+   fgets(name,sizeof(name),stdin);
+   
+   for(int i=0;name[i]!='\0' &&name[i]!='\n';i++)
+  
+      { 
+          if(name[i]==' ')
+       {
+           printf("\n");
+   }
+   else
+   { 
+       printf("%c",toupper(name[i]));
+   }
+      }
+    //no7
+     //string reverse and vowel count
+     char name[50];
+     
+         char len=0;
+         int count=0;
+     printf("The word:");
+     fgets(name,sizeof(name),stdin);
+     printf("%C",name);
+     for(int i=0;name[i]!='\0' &&name[i]!='\n';i++)
+     {  
+         len++;
+     }for(int i=0;i<len;i++)
+       {if(name[i]=='a'|| name[i]=='e'|| name[i]=='i'||name[i]=='o'||name[i]=='u'||name[i]=='A'|| name[i]=='E'|| name[i]=='I'||name[i]=='O'||name[i]=='U')
+       {
+           count++;
+       }
+       }printf("\n Reverse:");
+       for(int j=len-1;j>=0;j--)
+       {  printf("%C",  name[j]);
+    
+    
+    }printf("\nnumber of vowels is: %d", count);  
+     
+   
+ //no8
+  // first and last character
+   char str[100];
+   int len=0;
+   
+    printf("enter the string:");
+    fgets(str,sizeof(str),stdin);
+
+    for(int i=0;str[i]!='\0' && str[i]!='\n';i++)
+   {
+    len++;
+    }
+    printf("the first character:%c\n",str[0]);
+    printf("the last character:%c\n",str[len-1]);
+   
+   //no9
+   //the longest word
+   
+   char name[100];
+   char longest[100];
+  int currlen=0,maxlen=0;
+  int currstart=0,maxstart=0;
+  printf("enter the word:");
+    fgets(name,sizeof(name),stdin);
+  for(int i=0;name[i]!='\0'&&name[i]!='\n';i++)
+  {if(name[i]==' ')
+  {   
+  if(currlen>maxlen)
+   {
+   maxlen=currlen;
+   maxstart=currstart;
+    
+      }currlen=0;
+      currstart=i+1;
+  }else
+  {
+      currlen++;
+  }
+  if(currlen>maxlen)
+   {
+   maxlen=currlen;
+    maxstart=currstart;
+      }
+     }printf("longest word%d\n",maxlen); 
+     printf("longest word is:\n");
+     for(int i=0;i<maxlen;i++)
+     {printf("%c",name[maxstart+i]);
+     }
    
    
    
