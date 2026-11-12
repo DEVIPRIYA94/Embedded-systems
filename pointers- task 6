@@ -1,0 +1,81 @@
+#include <stdio.h>
+
+/*//No1
+//swap two numbers using pointers
+
+void swap(int *a,int *b)
+{
+    int c=*a;
+    *a=*b;
+    *b=c;}
+    int main()
+{
+    int x=10,y=20;
+swap(&x,&y);
+printf("%d %d",x,y);
+
+ 
+ 
+ //No2
+ //Largest element using pointer arithmetic
+int main()
+ {int arr[5] = {10, 50, 30, 90, 20};
+    int *p = arr, max = *p, i;
+    for(i=1; i<5; i++)
+    {
+        if(*(p+i) > max) max = *(p+i);
+    }
+    printf("Largest: %d", max);
+
+//No3
+//reverse array without indexing
+int main(){
+    int arr[5] = {1,2,3,4,5};
+    int *start = arr, *end = arr + 4, t;
+    while(start < end)
+    {
+        t = *start;
+        *start = *end; 
+        *end = t;
+        start++; 
+        end--;
+    }
+    for(int *p=arr; p<arr+5; p++) 
+    printf("%d ", *p);
+    
+    //no4
+    //increment variable using pointer
+    void inc(int*n)
+    {
+        (*n)++;
+    }
+    int main()
+    { int a=10;
+    inc(&a);
+    printf("%d",a);
+    
+    //no5
+    //double pointer inyt **pointer
+    int main(){
+        int a=10;
+        int *p=&a;
+        int **pp=&p;
+        printf("%d",**p);*/
+
+    //no6
+    //change the address
+        void change(int **pp, int *addr){
+    *pp = addr;
+}
+int main()
+{
+    int a=10, b=20;
+    int *p = &a;
+    printf("Before: %d\n", *p);
+    change(&p, &b);
+    printf("After: %d\n", *p); 
+   
+    
+    
+    return 0;
+}
