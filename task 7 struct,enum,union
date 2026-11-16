@@ -1,0 +1,119 @@
+#include <stdio.h>
+/*//No:1
+//structure Employee
+   
+   struct employee
+   {char name[5];
+   float monthly;
+   };
+   float annual(struct employee e)
+  { 
+    return e.monthly*12;
+   }
+   int main()
+   {
+   struct employee e={"Gowri",25000};
+   printf("Annual:%.2f",annual(e));
+    return 0;
+   }
+
+//No:2
+//union -int,float,char
+    
+    union data
+   {
+    int i;
+    float f;
+    char c;
+   };
+   int main()
+   { union data d;
+   d.i=10;
+   printf("Int:%d\n",d.i);
+   d.f=3.14;
+   printf("Float:%d\n",d.f);
+   d.c='R';
+   printf("Char:%d\n",d.c);
+   printf("Sizeof:%d\n",d.c);
+   return 0;
+   }
+
+//No:3
+//Enum,switch
+     
+      enum menu options{Add=1,sub,Mul,Exit};
+      int main()
+   {
+    int ch,a=15,b=20;
+    printf("1.Add 2.sub 3.Mul 4.exit");
+    scanf("%d",&ch);
+    switch(ch)
+    {
+        case Add:printf("%d",a+b);
+        break;
+        case sub:printf("%d",a-b);
+        break;
+        case Mul:printf("%d",a*b);
+        break;
+        case Exit:printf("Exit");
+        break;
+        default: printf("Invalid");
+        }
+        return 0;
+        
+   }
+   
+ //No:4
+ //#define area of circle
+     
+     #define PI 3.14159
+     int main()
+     { float r=6;
+     printf("Area:%.2f",(PI*r*r));
+     return 0;
+     }
+     
+     
+     
+//No:5
+//ifdef Debug
+    #define Debug
+    int main()
+    {
+        int a=5;
+       #ifdef Debug
+        printf("Debug Mode a:%d\n",a);
+        #endif
+        
+        return 0;
+    }*/
+
+//No:6    
+//Text file-student details
+    #include<string.h>
+    struct student
+   {
+    int roll;
+    char name[25];
+    float marks;
+   };
+
+   int main()
+   {
+       struct student s1={202,"varuna",85.75};
+       struct student s2;
+       s2.roll=203;
+       strcpy(s2.name,"thendral");
+       s2.marks=90.50;
+       printf("%d%s%.2f\n",s1.roll,s1.name,s1.marks);
+       printf("%d%s%.2f\n",s2.roll,s2.name,s2.marks);
+       return 0;
+   }
+        
+
+
+
+
+
+
+
