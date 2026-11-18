@@ -1,0 +1,104 @@
+#include <stdio.h>
+//errrno
+#include<errno.h>
+int main()
+{ 
+FILE *fp;
+    fp= fopen("C.txt","r");
+    if(fp==NULL)
+    {
+        printf("error number=%d\n",errno);
+       } return 0;
+    }
+
+//perror
+
+int main()
+{ 
+FILE *fp;
+    fp= fopen("C.txt","r");
+    if(fp==NULL)
+    {
+        printf("File opening failed");
+       } return 0;
+    }
+//WRITING to a file
+int main()
+{
+    FILE *fp;
+    fp= fopen("C.txt","w");
+    if(fp==NULL)
+    {
+        printf("file cannot be opened");
+        return 1;
+    }
+    fprintf(fp,"Hello,world!");
+    fclose(fp);
+    printf("Data written successfully.");
+    return 0;
+}
+
+//Reading from a file
+
+int main()
+{
+    FILE *fp;
+    char str[100];
+    fp= fopen("C.txt","r");
+    if(fp==NULL)
+    {
+        printf("file not found");
+        return 1;
+    }
+    fgets(str,100,fp);
+   printf("%s",str);
+    fclose(fp);
+    
+    return 0;
+}
+
+//appending Data
+int main()
+{  FILE *fp;
+    fp= fopen("C.txt","a");
+  fprintf(fp,"\n welcome to c programing");
+  fclose(fp);
+  return 0;
+}
+
+// character by character Reading
+int main()
+{  FILE *fp;
+char ch;
+    fp= fopen("C.txt","r");
+  while((ch=fgetc(fp))!=EOF)
+  { putchar(ch);
+  }
+  fclose(fp);
+  return 0;
+}
+
+//Hacker rank
+//No.1
+int main() 
+{
+	
+    char s[100];
+    scanf("%[^\n]%*c", &s);
+  	printf("Hello, World!\n");
+    printf("%s",s);
+    
+    return 0;
+}
+//no.2
+int main()
+{
+	int a,b;
+    float c,d;
+    
+   scanf("%d%d",&a,&b);
+   scanf("%f%f",&c,&d);
+    printf("%d %d\n",a+b, a-b);
+    printf("%.1f %.1f",c+d, c-d);
+    return 0;
+}*/
