@@ -110,7 +110,52 @@
        return 0;
    }
         
+//No:8
+//set the nth bit
 
+  int main()
+   {
+     unsigned char reg =0x00;
+   reg|=(1<<4);
+   printf("reg=%d\n",reg);
+
+    return 0;
+   }
+//No:9
+//clear the n th bit
+   int main()
+   {
+     unsigned char reg =0xFF;
+   reg&=~(1<<3);
+   printf("reg=%d\n",reg);
+
+    return 0;
+   }
+   
+ //No:10
+//toggle the n th bit
+   int main()
+   {
+     unsigned char reg =0x00;
+   reg^=(1<<2);
+   printf("%d\n",reg);
+ reg^=(1<<2);
+   printf("%d\n",reg);
+    return 0;
+   }*/
+     
+     
+ //No:11
+//clear the n th bit
+   int main()
+   {
+     unsigned char reg =0x04;
+   if(reg&(1<<2));
+   printf("bit 2 is set");
+ else
+   printf("bit 2 is set");
+    return 0;
+   }    
 
 
 
