@@ -64,8 +64,8 @@ int main()
                                energy=units*6.65;
                             else
                                energy=units*10.45;
-                            fixed=load*110*2;    //Bi-monthly
-                            duty=energy*0.05;   // 5% Duty
+                            fixed=load*110;    
+                            duty=energy*0.05;  
                             
                        }
                        
