@@ -1,0 +1,85 @@
+**********************************************************
+                 EB Bill Calculation
+**********************************************************
+
+            Enter the data of the consumer
+
+Enter the number of data entries =4
+
+ Enter the Consumer No:1
+
+ Enter the Name:priya
+
+ Select Category:
+1.House(Single phase)
+2.LT Commercial(LT-V)
+3.LT Industrial(LT-III B)
+4.HT Industrial
+Enter Choice:1
+
+ Enter the Units consumed:500
+
+---------------BILL FOR priya---------------
+Energy Charge  : Rs. 1570.00
+TOTAL BILL   : Rs.  1570.00
+-------------------------------------------
+
+ Enter the Consumer No:2
+
+ Enter the Name:kavi
+
+ Select Category:
+1.House(Single phase)
+2.LT Commercial(LT-V)
+3.LT Industrial(LT-III B)
+4.HT Industrial
+Enter Choice:2
+
+ Enter the Units consumed:210
+Enter the load(kW):3
+
+---------------BILL FOR kavi---------------
+Energy Charge  : Rs. 2194.50
+Fixed Charge  : Rs. 330.00
+Electricity Duty : Rs. 109.73
+TOTAL BILL   : Rs.  2634.22
+-------------------------------------------
+
+ Enter the Consumer No:3
+
+ Enter the Name:tamil
+
+ Select Category:
+1.House(Single phase)
+2.LT Commercial(LT-V)
+3.LT Industrial(LT-III B)
+4.HT Industrial
+Enter Choice:3
+
+ Enter the Units consumed:600
+
+---------------BILL FOR tamil---------------
+Energy Charge  : Rs. 4950.00
+Electricity Duty : Rs.247.50
+TOTAL BILL   : Rs.  5197.50
+-------------------------------------------
+
+ Enter the Consumer No:4
+
+ Enter the Name:santhu
+
+ Select Category:
+1.House(Single phase)
+2.LT Commercial(LT-V)
+3.LT Industrial(LT-III B)
+4.HT Industrial
+Enter Choice:4
+
+ Enter the Units consumed:800
+Enter the Demand load(kW):5
+
+---------------BILL FOR santhu---------------
+Energy Charge  : Rs. 6000.00
+Demand Charge : Rs. 500.00
+TOTAL BILL   : Rs.  6500.00
+-------------------------------------------
