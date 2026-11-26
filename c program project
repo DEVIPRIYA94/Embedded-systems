@@ -65,7 +65,7 @@ int main()
                             else
                                energy=units*10.45;
                             fixed=load*110;    
-                            duty=energy*0.05;  
+                             
                             
                        }
                        
