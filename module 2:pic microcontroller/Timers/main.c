@@ -1,0 +1,117 @@
+/*
+ * File:   main.c
+ * Author: DELL
+ *
+ * Created on 24 November, 2026, 1:02 PM
+ */
+
+
+#include <xc.h>
+// CONFIG
+#pragma config FOSC = HS        // Oscillator Selection bits (HS oscillator)
+#pragma config WDTE = OFF       // Watchdog Timer Enable bit (WDT disabled)
+#pragma config PWRTE = ON       // Power-up Timer Enable bit (PWRT enabled)
+#pragma config BOREN = ON       // Brown-out Reset Enable bit (BOR enabled)
+#pragma config LVP = OFF        // Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit (RB3 is digital I/O, HV on MCLR must be used for programming)
+#pragma config CPD = OFF        // Data EEPROM Memory Code Protection bit (Data EEPROM code protection off)
+#pragma config WRT = OFF        // Flash Program Memory Write Enable bits (Write protection off; all program memory may be written to by EECON control)
+#pragma config CP = OFF         // Flash Program Memory Code Protection bit (Code protection off)
+
+// #pragma config statements should precede project file includes.
+// Use project enums instead of #define for ON and OFF.
+
+
+
+#define _XTAL_FREQ 2000000
+
+volatile unsigned int count = 0;
+volatile unsigned char speed = 1;
+
+
+// timer0 interrupt
+void __interrupt() ISR(void)
+{
+    if (TMR0IF)
+    {
+        TMR0IF = 0;
+        TMR0 = 61;
+        count++;
+        
+        if(speed==1)
+        {
+            if(count>=50)
+            {
+                RB0=!RB0;
+                count=0;
+            }
+        }
+        else if (speed==2)
+        {
+            if(count>=100)
+            {
+                RB0=!RB0;
+                count=0;
+            }
+        }
+        else if(speed==3)
+        {
+            if(count>=200)
+            {
+                RB0=!RB0;
+                count=0;
+
+            }
+        }
+    }
+}
+
+void main()
+{
+    // PORTB direction
+    TRISB=0X00;
+    TRISBbits.TRISB0=0;
+    TRISBbits.TRISB1=1;
+    
+    // Initial values
+    RB0=0;
+    
+   //disable analog functions
+   ADCON1=0X06;
+    
+    
+    //timer0 configuration
+    OPTION_REGbits.T0CS=0;
+    OPTION_REGbits.PSA=0;
+    
+    OPTION_REGbits.PS2=1;
+    OPTION_REGbits.PS1=1;
+    OPTION_REGbits.PS0=1;
+    
+    
+    TMR0=61;
+    
+    
+    
+    //enable interrupts
+    INTCONbits.TMR0IE=1;
+    INTCONbits.TMR0IF=0;
+    INTCONbits.GIE=1;
+    
+    
+    
+    while(1)
+    {
+        if(RB1==0)
+        {
+            __delay_ms(200);
+            speed++;
+            if(speed>3)
+            {
+                speed=1;
+                
+            }
+            while(RB1==0);
+            
+        }
+    }
+}
